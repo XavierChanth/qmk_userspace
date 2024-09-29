@@ -12,12 +12,13 @@ jobs:
         with:
             qmk_repo: qmk/qmk_firmware
             qmk_ref: master
-            preparation_command: "rm -rf keyboards/voyager"
+            preparation_command:
+                "qmk userspace-remove -kb voyager -km xavierchanth"
 
     publish:
         name: "QMK Userspace Publish"
         uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
         with:
-            release_name: "Build {{github.ref}}"
+            release_name: "Build-{{github.ref}}"
         if: always() && !cancelled()
         needs: build

@@ -12,12 +12,13 @@ jobs:
         with:
             qmk_repo: zsa/qmk_firmware
             qmk_ref: firmware23
-            preparation_command: "rm -rf keyboards/nuphy"
+            preparation_command:
+                "qmk userspace-remove -kb nuphy/air75_v2/ansi -km xavierchanth"
 
     publish:
         name: "QMK Userspace Publish"
         uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
         with:
-            release_name: "Build ZSA {{github.ref}}"
+            release_name: "Build-ZSA-{{github.ref}}"
         if: always() && !cancelled()
         needs: build
