@@ -13,7 +13,7 @@ jobs:
             qmk_repo: zsa/qmk_firmware
             qmk_ref: firmware23
             preparation_command:
-                "qmk userspace-remove -kb nuphy/air75_v2/ansi -km xavierchanth"
+                "qmk userspace-add -kb voyager -km xavierchanth"
 
     publish:
         name: "QMK Userspace Publish"
