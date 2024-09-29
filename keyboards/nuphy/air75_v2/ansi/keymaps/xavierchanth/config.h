@@ -1,0 +1,7 @@
+#define TAPPING_TERM 250
+#define QUICK_TAP_TERM 125
+/* #define PERMISSIVE_HOLD */
+/* #define PERMISSIVE_HOLD_PER_KEY */
+/* #define HOLD_ON_OTHER_KEY_PRESS */
+/* #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY */
+/* #define IGNORE_MOD_TAP_INTERRUPT */
